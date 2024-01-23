@@ -16,7 +16,7 @@ function App() {
     <div className='text-pink-900'>Hello world</div>
    
    <Routes>
-    <Route path='/modal' element={<CustomModal/>}/>
+    <Route path='/' element={<CustomModal/>}/>
     <Route path='/navbar' element={<Nav/>}/>
     <Route path='/pop' element={<Pop/>}/>
     
