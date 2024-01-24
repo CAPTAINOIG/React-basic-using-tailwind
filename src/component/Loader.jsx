@@ -21,8 +21,11 @@ const Loader = () => {
     <div>
       {loading ? (
         <div className="loading-container">
-          <h2>Loading...</h2>
-          <img src={loader} alt="" />
+        <img
+        src={loader}
+        alt="Loading..."
+        style={{ display: 'block', margin: '0 auto', width: '250px', height: '250px', marginTop:'200px' }}
+      />
           {/* Add your loader styles here */}
         </div>
       ) : (
