@@ -36,6 +36,15 @@ const Nav =()=> {
             Features
           </Link>
         </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Features
+          </Link>
+        </NavbarItem><NavbarItem>
+        <Link color="foreground" href="#">
+          Features
+        </Link>
+      </NavbarItem>
         <NavbarItem isActive>
           <Link href="#" aria-current="page">
             Customers
@@ -52,7 +61,7 @@ const Nav =()=> {
           <Link href="#">Login</Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
+          <Button as={Link} color="success" href="#" variant="flat">
             Sign Up
           </Button>
         </NavbarItem>
