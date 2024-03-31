@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 
 const Select = () => {
     const [isChecked, setIsChecked] = useState(false);
+    // console.log(isChecked);
+    const [isChecked1, setIsChecked1] = useState(false);
+    // console.log(isChecked1);
     const [selected, setSelected] = useState([]);
 
         const [checkboxes, setCheckboxes] = useState([
@@ -24,15 +27,37 @@ const Select = () => {
             
         };
     
-        const handleCheckboxChange = (id) => {
-            console.log(id);
-            // checkbox.id === id ? { ...checkbox, checked: !checkbox.checked } : checkbox: In this part, it checks if the id of the current checkbox is equal to the id being searched for.
-            // If it is, a new checkbox object is created with all the properties of the current checkbox 
-            // // each item has id and once clicked it generates an id. so here we check if the id are the same
-            const updatedCheckboxes = checkboxes.map(checkbox => checkbox.id === id ? { ...checkbox, checked: !checkbox.checked } : checkbox
-            );
+        const handleCheckboxChange = (ids) => {
+            if (!Array.isArray(ids)) {
+                ids = [ids]; // Convert to array if single ID is provided
+            }
+        
+            const updatedCheckboxes = checkboxes.map(checkbox => {
+                if (ids.includes(checkbox.id)) {
+                    return { ...checkbox, checked: !checkbox.checked };
+                }
+                return checkbox;
+            });
+        
             setCheckboxes(updatedCheckboxes);
+        
+            ids.forEach(id => {
+                const clickedCheckbox = updatedCheckboxes.find(checkbox => checkbox.id === id);
+                if (clickedCheckbox) {
+                    console.log(clickedCheckbox.label + ': ' + clickedCheckbox.checked);
+                } else {
+                    console.log('Checkbox not found');
+                }
+            });
         };
+        
+        // Example usage:
+        // Assuming you want to toggle the checkboxes with IDs 2 and 4
+        // handleCheckboxChange([2, 4]);
+        
+        // Or if you want to toggle a single checkbox with ID 3
+        // handleCheckboxChange(3);
+        
     
         const DeselectAll = () => {
             const Deselect = checkboxes.map(checkbox => ({...checkbox, checked:false}));
@@ -49,8 +74,8 @@ const Select = () => {
 
     function handleCbClick(ev) {
         const { checked, name } = ev.target;
-        // console.log(name);
         if (checked) {
+            console.log(checked);
             // here, the name parameter is saved to selected then the selected will be used to filter. in form of array
             setSelected([...selected, name]);
 
@@ -73,24 +98,9 @@ const Select = () => {
                 </div>
                 <div className='flex gap-10'>
                     <p>RSR</p>
-                    <input type="checkbox" checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
+                    <input type="checkbox" checked={isChecked1} onChange={() => setIsChecked1(!isChecked1)} />
                 </div>
-                <div className='flex gap-10'>
-                    <p>RSR</p>
-                    <input type="checkbox" checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
-                </div>
-                <div className='flex gap-10'>
-                    <p>RSR</p>
-                    <input type="checkbox" checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
-                </div>
-                <div className='flex gap-10'>
-                    <p>RSR</p>
-                    <input type="checkbox" checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
-                </div>
-                <div className='flex gap-10'>
-                    <p>RSR</p>
-                    <input type="checkbox" checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
-                </div>
+                
 
                 <input type="checkbox" checked={selected.includes('wifi')} name="wifi" onChange={handleCbClick} />
                 <span>Wifi</span>
