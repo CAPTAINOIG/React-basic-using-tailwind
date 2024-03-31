@@ -9,7 +9,8 @@ import Header from './component/Header'
 import Rootlayout from './layout/Rootlayout'
 import Hello from './component/Hello'
 import Select from './component/Select'
-import StateAPI from './component/StateApi'
+import State from './component/State'
+
 
 
 
@@ -27,7 +28,7 @@ function App() {
     <Route path='layout/*' element={<Rootlayout/>}/>
     <Route path='/header' element={<Header/>}/>
     <Route path='/select' element={<Select/>}/>
-    <Route path='/state' element={<StateAPI/>}/>
+    <Route path='/state' element={<State/>}/>
    </Routes>
     </>
   )
