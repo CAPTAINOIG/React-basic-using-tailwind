@@ -9,6 +9,7 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 
+
 const CustomModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 

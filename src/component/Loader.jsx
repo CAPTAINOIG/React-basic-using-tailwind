@@ -1,37 +1,35 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate  } from 'react-router-dom';
-import CustomModal from './CustomModal';
-import loader from '../assets/loader.gif'
+import { useNavigate } from 'react-router-dom';
+import loaderimage from '../assets/loaderimage.gif';
+import Datadetails from './Datadetails';
+
 
 const Loader = () => {
   const [loading, setLoading] = useState(true);
-  const navigate  = useNavigate ();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-      // Navigate to your signup page after loading (adjust the path as needed)
-      navigate('/modal');
+      navigate('/fashion');
     }, 3000);
 
     return () => clearTimeout(timer);
   }, [navigate]);
 
   return (
-    <div>
+    <div className='relative'>
       {loading ? (
-        <div className="loading-container">
-        <img
-        src={loader}
-        alt="Loading..."
-        style={{ display: 'block', margin: '0 auto', width: '250px', height: '250px', marginTop:'200px' }}
-      />
-          {/* Add your loader styles here */}
+        <div className='bg-slate-200 dark:bg-slate-200 h-screen w-full absolute'>
+          <img id='img'
+            src={loaderimage}
+            alt="Loading..."
+            style={{ display: 'block', margin: '0 auto', width: '250px', height: '250px', marginTop:'200px' }}
+          />
         </div>
       ) : (
         <div>
-          {/* You can add additional content or components here */}
-          <CustomModal />
+          <Datadetails/>
         </div>
       )}
     </div>
