@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import loaderimage from '../assets/loaderimage.gif';
-import Datadetails from './Datadetails';
+import loader from '../assets/loader.gif';
+import ImageGallery from './ImageGallery';
+
 
 
 const Loader = () => {
@@ -11,7 +12,7 @@ const Loader = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-      navigate('/fashion');
+      navigate('/gallery');
     }, 3000);
 
     return () => clearTimeout(timer);
@@ -22,14 +23,14 @@ const Loader = () => {
       {loading ? (
         <div className='bg-slate-200 dark:bg-slate-200 h-screen w-full absolute'>
           <img id='img'
-            src={loaderimage}
+            src={loader}
             alt="Loading..."
             style={{ display: 'block', margin: '0 auto', width: '250px', height: '250px', marginTop:'200px' }}
           />
         </div>
       ) : (
         <div>
-          <Datadetails/>
+          <ImageGallery/>
         </div>
       )}
     </div>

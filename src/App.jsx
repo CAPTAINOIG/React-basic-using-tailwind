@@ -5,11 +5,11 @@ import CustomModal from './component/CustomModal'
 import Nav from './component/Nav'
 import Pop from './component/Pop'
 import Loader from './component/Loader'
-import Header from './component/Header'
 import Rootlayout from './layout/Rootlayout'
 import Hello from './component/Hello'
 import Select from './component/Select'
 import State from './component/State'
+import ImageGallery from './component/ImageGallery'
 
 
 
@@ -26,9 +26,9 @@ function App() {
     <Route path='/pop' element={<Pop/>}/>
     <Route path='/hello' element={<Hello/>}/>
     <Route path='layout/*' element={<Rootlayout/>}/>
-    <Route path='/header' element={<Header/>}/>
     <Route path='/select' element={<Select/>}/>
     <Route path='/state' element={<State/>}/>
+    <Route path='/gallery' element={<ImageGallery/>}/>
    </Routes>
     </>
   )
