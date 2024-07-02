@@ -10,6 +10,8 @@ import Hello from './component/Hello'
 import Select from './component/Select'
 import State from './component/State'
 import ImageGallery from './component/ImageGallery'
+import CheckboxDropdown from './component/CheckboxDropdown'
+import ModalExample from './component/ModalExample'
 
 
 
@@ -29,6 +31,8 @@ function App() {
     <Route path='/select' element={<Select/>}/>
     <Route path='/state' element={<State/>}/>
     <Route path='/gallery' element={<ImageGallery/>}/>
+    <Route path='/dropdown' element={<CheckboxDropdown/>}/>
+    <Route path='/modalexample' element={<ModalExample/>}/>
    </Routes>
     </>
   )
