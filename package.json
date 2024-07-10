@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
+    "antd": "^5.19.1",
     "caniuse-lite": "^1.0.30001639",
     "framer-motion": "^10.18.0",
     "lucide-react": "^0.321.0",

@@ -12,6 +12,7 @@ import State from './component/State'
 import ImageGallery from './component/ImageGallery'
 import CheckboxDropdown from './component/CheckboxDropdown'
 import ModalExample from './component/ModalExample'
+import RangePicker from './component/RangePicker'
 
 
 
@@ -33,6 +34,7 @@ function App() {
     <Route path='/gallery' element={<ImageGallery/>}/>
     <Route path='/dropdown' element={<CheckboxDropdown/>}/>
     <Route path='/modalexample' element={<ModalExample/>}/>
+    <Route path='/range' element={<RangePicker/>}/>
    </Routes>
     </>
   )
