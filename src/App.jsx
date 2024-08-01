@@ -14,6 +14,10 @@ import CheckboxDropdown from './component/CheckboxDropdown'
 import ModalExample from './component/ModalExample'
 import RangePicker from './component/RangePicker'
 import Clan from './component/Clan'
+import Dropdown from './component/Dropdown'
+import Setting from './component/Setting'
+import HistoryTable from './component/Table/HistoryTable'
+import SignIn from './component/Filedash/Signin'
 
 
 
@@ -37,6 +41,10 @@ function App() {
     <Route path='/modalexample' element={<ModalExample/>}/>
     <Route path='/range' element={<RangePicker/>}/>
     <Route path='/clan' element={<Clan/>}/>
+    <Route path='/dropdown' element={<Dropdown/>}/>
+    <Route path='/setting' element={<Setting/>}/>
+    <Route path='/table' element={<HistoryTable/>}/>
+    <Route path='/signin' element={<SignIn/>}/>
    </Routes>
     </>
   )
