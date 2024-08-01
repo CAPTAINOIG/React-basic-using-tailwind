@@ -18,6 +18,7 @@ import Dropdown from './component/Dropdown'
 import Setting from './component/Setting'
 import HistoryTable from './component/Table/HistoryTable'
 import SignIn from './component/Filedash/Signin'
+import Signup from './component/Filedash/Signup'
 
 
 
@@ -45,6 +46,7 @@ function App() {
     <Route path='/setting' element={<Setting/>}/>
     <Route path='/table' element={<HistoryTable/>}/>
     <Route path='/signin' element={<SignIn/>}/>
+    <Route path='/signup' element={<Signup/>}/>
    </Routes>
     </>
   )
