@@ -19,6 +19,8 @@ import Setting from './component/Setting'
 import HistoryTable from './component/Table/HistoryTable'
 import SignIn from './component/Filedash/Signin'
 import Signup from './component/Filedash/Signup'
+import ImageStack from './component/ImageStack'
+import ImageInset from './component/ImageInset'
 
 
 
@@ -47,6 +49,8 @@ function App() {
     <Route path='/table' element={<HistoryTable/>}/>
     <Route path='/signin' element={<SignIn/>}/>
     <Route path='/signup' element={<Signup/>}/>
+    <Route path='/image' element={<ImageStack/>}/>
+    <Route path='/inset' element={<ImageInset/>}/>
    </Routes>
     </>
   )
