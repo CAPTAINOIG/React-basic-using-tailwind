@@ -1,11 +1,11 @@
 import React from 'react';
 import logodark from '../Filedash/image/logodark.png'
-import { FaFacebook } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { FaSquareDribbble } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa";
-import { AiFillGoogleCircle } from "react-icons/ai";
-import { FaSquareBehance } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa6";
+import { TiSocialTwitter } from "react-icons/ti";
+import { IoLogoDribbble } from "react-icons/io";
+import { TiSocialLinkedin } from "react-icons/ti";
+import { IoLogoGoogle } from "react-icons/io";
+import { TbBrandBehance } from "react-icons/tb";
 import { Link } from 'react-router-dom';
 
 
@@ -59,32 +59,32 @@ const SignIn = () => {
           <ul className="list-inline flex justify-center space-x-4 mb-6">
             <li className="list-inline-item">
               <a href="#" className="btn btn-floating bg-blue-600 text-black w-10 h-10 flex items-center justify-center rounded-full">
-              <i class="fa fa-behance"><FaFacebook /></i>
+              <i class="fa fa-behance"><FaFacebookF /></i>
               </a>
             </li>
             <li className="list-inline-item">
               <a href="#" className="btn btn-floating bg-blue-400 text-black w-10 h-10 flex items-center justify-center rounded-full">
-              <i class="fa fa-behance"><FaSquareXTwitter /></i>
+              <i class="fa fa-behance"><TiSocialTwitter /></i>
               </a>
             </li>
             <li className="list-inline-item">
               <a href="#" className="btn btn-floating bg-pink-600 text-black w-10 h-10 flex items-center justify-center rounded-full">
-              <i class="fa fa-behance"><FaSquareDribbble /></i>
+              <i class="fa fa-behance"><IoLogoDribbble /></i>
               </a>
             </li>
             <li className="list-inline-item">
               <a href="#" className="btn btn-floating bg-blue-700 text-black w-10 h-10 flex items-center justify-center rounded-full">
-              <i class="fa fa-behance"><FaLinkedin /></i>
+              <i class="fa fa-behance"><TiSocialLinkedin /></i>
               </a>
             </li>
             <li className="list-inline-item">
               <a href="#" className="btn btn-floating bg-red-600 text-black w-10 h-10 flex items-center justify-center rounded-full">
-              <i class="fa fa-behance"><AiFillGoogleCircle /></i>
+              <i class="fa fa-behance"><IoLogoGoogle /></i>
               </a>
             </li>
             <li className="list-inline-item">
               <a href="#" className="btn btn-floating bg-blue-500 text-black w-10 h-10 flex items-center justify-center rounded-full">
-              <i class="fa fa-behance"><FaSquareBehance /></i>
+              <i class="fa fa-behance"><TbBrandBehance /></i>
 
               </a>
             </li>
