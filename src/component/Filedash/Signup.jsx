@@ -41,19 +41,19 @@ const Signup = () => {
         </div>
         <h5 className="text-center mb-6">Create account</h5>
         <form onSubmit={formik.handleSubmit}>
-          <div className="h-[50px] mb-7">
-            <input type="text" className="h-[50px] w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Firstname" name='firstname' onBlur={formik.handleBlur} onChange={formik.handleChange}  autoFocus />
+          <div className="h-[50px] mb-5">
+            <input type="text" className="h-[50px] w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Firstname" name='firstname' onBlur={formik.handleBlur} onChange={formik.handleChange} />
             <span className='text-red-500 text-[12px]'>{formik.touched.firstname && formik.errors.firstname}</span>
           </div>
-          <div className="h-[50px] mb-7">
+          <div className="h-[50px] mb-5">
             <input type="text" className="h-[50px] w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Lastname" name='lastname' onBlur={formik.handleBlur} onChange={formik.handleChange}  />
             <span className='text-red-500 text-[12px]'>{formik.touched.lastname && formik.errors.lastname}</span>
           </div>
-          <div className="h-[50px] mb-7">
+          <div className="h-[50px] mb-5">
             <input type="email" className="h-[50px] w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Email" name='email' onBlur={formik.handleBlur} onChange={formik.handleChange} />
             <span className='text-red-500 text-[12px]'>{formik.touched.email && formik.errors.email}</span>
           </div>
-          <div className="h-[50px] mb-7">
+          <div className="h-[50px] mb-5">
             <input type="password" className="h-[50px] w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Password" name='password' onBlur={formik.handleBlur} onChange={formik.handleChange} />
             <span className='text-red-500 text-[12px]'>{formik.touched.password && formik.errors.password}</span>
           </div>
