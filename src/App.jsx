@@ -21,6 +21,7 @@ import SignIn from './component/Filedash/Signin'
 import Signup from './component/Filedash/Signup'
 import ImageStack from './component/ImageStack'
 import ImageInset from './component/ImageInset'
+import SettingsData from './Settings/SettingsData'
 
 
 
@@ -51,6 +52,7 @@ function App() {
     <Route path='/signup' element={<Signup/>}/>
     <Route path='/image' element={<ImageStack/>}/>
     <Route path='/inset' element={<ImageInset/>}/>
+    <Route path='/settingdata' element={<SettingsData/>}/>
    </Routes>
     </>
   )
