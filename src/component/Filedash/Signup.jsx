@@ -1,76 +1,41 @@
-import React, { useState } from 'react';
+import React from 'react';
 import logodark from '../Filedash/image/logodark.png'
-import { IoEyeSharp } from "react-icons/io5";
-import { IoEyeOffSharp } from "react-icons/io5";
-import { useFormik } from 'formik';
-import * as yup from 'yup'
 import { Link } from 'react-router-dom';
 
 const Signup = () => {
-  const [isPasswordVisible, setIsPasswordVisible] = useState('text')
-  // console.log(isPasswordVisible);
-
-  const handlePasswordVisible = () => {
-    setIsPasswordVisible(!isPasswordVisible)
-  }
-
-  let lower = new RegExp(`(?=.*[a-z])`);
-  let upper = new RegExp(`(?=.*[A-Z])`);
-  let number = new RegExp(`(?=.*[0-9])`);
-  let length = new RegExp(`(?=.{8,})`);
-
-  let formik = useFormik({
-    initialValues:{
-      firstname: '',
-      lastname: '',
-      email: '',
-      password: '',
-    },
-    onSubmit:(values)=>{
-      console.log(values);
-    },
-    validationSchema:yup.object({
-      firstname: yup.string().required( <span className='flex'><span>This field is required</span></span> ),
-      lastname: yup.string().required( <span className='flex'><span>This field is required</span></span> ),
-      email: yup.string().email('Invalid email format').required( <span className='flex'><span>This field is required</span></span> ),
-      password: yup.string().matches(lower, "Must include lowercase letter").matches(upper, "Must include uppercase letter").matches(number, "Must include a number").matches(length, "Must not be less than 8 characters").required("This field is required"),
-    })
-  })
   return (
-    <section id='background' className='flex flex-col py-20 lg:py-8 md:py-8 pb-20 items-center justify-center'>
-      <div className='content bg-white shadow rounded lg:w-[30%] md:w-[50%] w-[80%] p-5 px-5 mt-10'>
-        <div className=''>
-          <img className='mx-auto' src={logodark} alt="" />
+    <div id='background' className="form-membership min-h-screen flex items-center justify-center py-10">
+      <div className="preloader absolute inset-0 flex items-center justify-center">
+        <div className="preloader-icon animate-spin"></div>
+      </div>
+      <div className="content bg-white p-8 rounded-lg shadow-md w-full max-w-sm">
+        <div id="logo" className="mb-6">
+        <img className='mx-auto' src={logodark} alt="" />
         </div>
-        <h1 className='my-3 text-center text-black'>Create account</h1>
-        <form onSubmit={formik.handleSubmit} className='px-5'>
-        <div className='my-3 h-[50px]'>
-            <input className='border mt-1 h-[35px] rounded border-gray-300 py-2 px-4 w-full focus:outline-blue-700' onBlur={formik.handleBlur} onChange={formik.handleChange} type="firstname" placeholder="Firstname" name='firstname' />
-            <span className='text-red-500 text-[12px]'>{formik.touched.firstname && formik.errors.firstname}</span>
+        <h5 className="text-center mb-6">Create account</h5>
+        <form>
+          <div className="form-group mb-4">
+            <input type="text" className="form-control w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Firstname" required autoFocus />
           </div>
-          <div className='my-3 h-[50px]'>
-            <input className='border mt-1 rounded h-[35px] border-gray-300 py-2 px-4 w-full focus:outline-blue-700' onBlur={formik.handleBlur} onChange={formik.handleChange} type="lastname" placeholder="Lastname" name='lastname' />
-            <span className='text-red-500 text-[12px]'>{formik.touched.lastname && formik.errors.lastname}</span>
+          <div className="form-group mb-4">
+            <input type="text" className="form-control w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Lastname" required />
           </div>
-          <div className='my-3 h-[50px]'>
-            <input className='border mt-1 rounded h-[35px] border-gray-300 py-2 px-4 w-full focus:outline-blue-700' onBlur={formik.handleBlur} onChange={formik.handleChange} type="email" placeholder="email" name='email' />
-            <span className='text-red-500 text-[12px]'>{formik.touched.email && formik.errors.email}</span>
+          <div className="form-group mb-4">
+            <input
+              type="email" className="form-control w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Email" required/>
           </div>
-          <div className='relative my-3 h-[50px]'>
-            <input className='border rounded h-[35px] border-gray-300 py-2 px-4 w-full focus:outline-blue-700' type={isPasswordVisible ? 'text' : 'password'} placeholder="Password" onBlur={formik.handleBlur} onChange={formik.handleChange} name='password' />
-            <span onClick={() => handlePasswordVisible('text')} className='absolute top-[12px] right-5'>{isPasswordVisible ? <span><IoEyeSharp /></span> : <span><IoEyeOffSharp /></span>}</span>
-            <span className='text-red-500 text-[12px]'>{formik.touched.password && formik.errors.password}</span>
+          <div className="form-group mb-4">
+            <input type="password" className="form-control w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Password" required />
           </div>
-          
-          <button type='submit' className='btn font-bold w-full hover:bg-blue-900 bg-blue-700 p-1 my-3 rounded text-white'>Register</button>
-        </form>
-        <div className='border-b border-gray-300 my-5'></div>
-        <div className='text-center text-gray-500 my-5'>Already have an account</div>
-        <div className='text-center border font-bold text-sm w-[20%] mx-auto border-gray-300  my-5 hover:bg-gray-400 hover:border-gray-300 rounded'>
+          <button className="btn btn-primary btn-block w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700"> Register</button>
+          <hr className="my-6" />
+          <p className="text-center text-gray-600 mb-4">Already have an account?</p>
+          <div className='text-center border font-bold text-sm w-[20%] mx-auto border-gray-300  my-5 hover:bg-gray-400 hover:border-gray-300 rounded'>
         <Link to="/signin" >Sign in!</Link>
         </div>
+        </form>
       </div>
-    </section>
+    </div>
   );
 };
 
