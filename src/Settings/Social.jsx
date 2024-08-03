@@ -5,6 +5,10 @@ const Social = () => {
     <div className="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
       <div className="content-title mb-4">
         <h4 className="text-xl font-semibold">Social</h4>
+        <div className="relative w-full border-b h-0.5">
+            <div className="absolute inset-0 w-20 bg-blue-700"></div>
+            <div className="absolute inset-y-0 right-0 w-1/8 bg-gray-500"></div>
+          </div>
       </div>
       <div className="flex flex-wrap -mx-4">
         <div className="w-full md:w-1/2 px-4">
@@ -49,7 +53,7 @@ const Social = () => {
             </div>
             <button
               type="button"
-              className="btn btn-primary bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+              className="btn btn-primary bg-blue-700 text-white py-2 px-4 rounded hover:bg-blue-600"
             >
               Save Changes
             </button>

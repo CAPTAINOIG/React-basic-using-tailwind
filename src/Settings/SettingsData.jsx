@@ -11,13 +11,13 @@ const SettingsData = () => {
         setCurrentSetting(setting)
     }
   return (
-    <div className="p-10 bg-white shadow  mb-7 lg:mx-2 md:mx-6 mx-4 dark:bg-gray-700">
-      <h1 className='text-xl my-2 font-bold'>Settings</h1>
+    <div className="px-10 py-6 bg-white lg:mx-2 md:mx-6 mx-4 dark:bg-gray-700">
+      <h1 className='text-3xl my-5 font-semi-bold'>Settings</h1>
         <div className="flex mb-8">
-        <button onClick={() => handleSetting('account')} className={`text-black py-2 px-1 rounded transition-all duration-500 ease-in-out transform ${currentSetting === 'account'&& 'bg-blue-700 border-t-4 text-white border-blue-600 scale-105'}`}>Security</button>
-        <button onClick={() => handleSetting('information')} className={`py-2 px-1 text-black rounded transition-all duration-500 ease-in-out transform ${currentSetting === 'information' && 'bg-blue-700 text-white border-t-4 border-blue-600 scale-105'}`}>Information</button>
-        <button onClick={() => handleSetting('security')} className={`py-2 px-1 text-black rounded transition-all duration-500 ease-in-out transform ${currentSetting === 'security' && 'bg-blue-700 border-t-4 border-blue-600 text-white  scale-105'}`}>Security</button>
-        <button onClick={() => handleSetting('social')} className={`py-2 px-1 text-black rounded transition-all duration-500 ease-in-out transform ${currentSetting === 'social' && 'bg-blue-700 border-t-4 text-white  border-blue-600 scale-105'}`}>Social</button>
+        <button onClick={() => handleSetting('account')} className={`text-black px-3 rounded transition-all duration-500 ease-in-out transform ${currentSetting === 'account'&& 'bg-blue-700 border-t-4 text-white border-blue-600 scale-105'}`}>Account</button>
+        <button onClick={() => handleSetting('information')} className={`px-3 text-black rounded transition-all duration-500 ease-in-out transform ${currentSetting === 'information' && 'bg-blue-700 text-white border-t-4 border-blue-600 scale-105'}`}>Information</button>
+        <button onClick={() => handleSetting('security')} className={`px-3 text-black rounded transition-all duration-500 ease-in-out transform ${currentSetting === 'security' && 'bg-blue-700 border-t-4 border-blue-600 text-white  scale-105'}`}>Security</button>
+        <button onClick={() => handleSetting('social')} className={`py-2 px-3 text-black rounded transition-all duration-500 ease-in-out transform ${currentSetting === 'social' && 'bg-blue-700 border-t-4 text-white  border-blue-600 scale-105'}`}>Social</button>
     </div>
     <div>
         {currentSetting === 'account' && <Account/>}
@@ -25,6 +25,18 @@ const SettingsData = () => {
         {currentSetting === 'security' && <Security/>}
         {currentSetting === 'social' && <Social/>}
     </div>
+
+    {/* <!-- Footer --> */}
+            <footer class="text-sm flex justify-between mt-3">
+                <div>© 2020 FILEDASH - <a href="http://laborasyon.com" target="_blank">LABORAYSON</a></div>
+                <div>
+                    <nav class="nav flex gap-5">
+                        <a href="https://themeforest.net/licenses/standard" class="nav-link">LICENCES</a>
+                        <a href="#" class="nav-link">CHANGE LOG</a>
+                        <a href="#" class="nav-link">GET HELP</a>
+                    </nav>
+                </div>
+            </footer>
     </div>
   )
 }

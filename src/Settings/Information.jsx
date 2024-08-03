@@ -5,6 +5,10 @@ const Information = () => {
     <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
       <div className="content-title mb-4">
         <h4 className="text-xl font-semibold">Information</h4>
+        <div className="relative w-full border-b h-0.5">
+            <div className="absolute inset-0 w-20 bg-blue-700"></div>
+            <div className="absolute inset-y-0 right-0 w-1/8 bg-gray-500"></div>
+          </div>
       </div>
       <div className="flex flex-wrap -mx-4">
         <div className="w-full md:w-1/2 px-4">
