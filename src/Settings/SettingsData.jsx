@@ -11,7 +11,7 @@ const SettingsData = () => {
         setCurrentSetting(setting)
     }
   return (
-    <div className="px-10 py-6 bg-white lg:mx-2 md:mx-6 mx-4 dark:bg-gray-700">
+    <div id='fontface' className="px-10 py-6 bg-white lg:mx-2 md:mx-6 mx-4 dark:bg-gray-700">
       <h1 className='text-3xl my-5 font-semi-bold'>Settings</h1>
         <div className="flex mb-8">
         <button onClick={() => handleSetting('account')} className={`text-black px-3 rounded transition-all duration-500 ease-in-out transform ${currentSetting === 'account'&& 'bg-blue-700 border-t-4 text-white border-blue-600 scale-105'}`}>Account</button>

@@ -41,5 +41,15 @@
     position: relative;
     z-index: 3; /* Place it above the background and overlay */
   }
+
+  #fontface {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(s/josefinsans/v32/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_DjQXME.ttf) format('truetype');
+  }
+  
+  
   
   
