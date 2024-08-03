@@ -3,6 +3,7 @@ import Account from './Account';
 import Information from './Information';
 import Security from './Security';
 import Social from './Social';
+import { Link } from 'react-router-dom';
 
 const SettingsData = () => {
     const [currentSetting, setCurrentSetting] = useState('account')
@@ -27,13 +28,15 @@ const SettingsData = () => {
     </div>
 
     {/* <!-- Footer --> */}
-            <footer class="text-sm flex justify-between mt-3">
+            <footer className="text-sm flex justify-between mt-3">
                 <div>© 2020 FILEDASH - <a href="http://laborasyon.com" target="_blank">LABORAYSON</a></div>
                 <div>
-                    <nav class="nav flex gap-5">
-                        <a href="https://themeforest.net/licenses/standard" class="nav-link">LICENCES</a>
-                        <a href="#" class="nav-link">CHANGE LOG</a>
-                        <a href="#" class="nav-link">GET HELP</a>
+                    <nav className="lg:block md:block hidden">
+                      <div className='flex gap-5'>
+                        <Link href="https://themeforest.net/licenses/standard" class="nav-link">LICENCES</Link>
+                        <Link href="#" class="nav-link">CHANGE LOG</Link>
+                        <Link href="#" class="nav-link">GET HELP</Link>
+                      </div>
                     </nav>
                 </div>
             </footer>
