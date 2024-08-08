@@ -11,10 +11,10 @@ export default {
   theme: {
     extend: {
       // Your custom Tailwind CSS theme extensions go here
-      colors: {
-        // Example: Adding a custom color
-        customColor: '#123456',
-      },
+      // colors: {
+      //   // Example: Adding a custom color
+      //   customColor: '#123456',
+      // },
     },
   },
   darkMode: "class",

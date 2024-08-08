@@ -49,6 +49,21 @@
     font-display: swap;
     src: url(s/josefinsans/v32/Qw3PZQNVED7rKGKxtqIqX5E-AVSJrOCfjY46_DjQXME.ttf) format('truetype');
   }
+
+
+  .custom-table-wrapper {
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  .custom-table-header,
+  .custom-table-cell {
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+
+  
   
   
   

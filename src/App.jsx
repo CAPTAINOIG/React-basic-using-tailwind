@@ -16,12 +16,14 @@ import RangePicker from './component/RangePicker'
 import Clan from './component/Clan'
 import Dropdown from './component/Dropdown'
 import Setting from './component/Setting'
+import Avatar from './component/AvatarPage/Avatar'
 import HistoryTable from './component/Table/HistoryTable'
 import SignIn from './component/Filedash/Signin'
 import Signup from './component/Filedash/Signup'
 import ImageStack from './component/ImageStack'
 import ImageInset from './component/ImageInset'
 import SettingsData from './Settings/SettingsData'
+import DataTable from './component/newpage/DataTable'
 
 
 
@@ -53,6 +55,8 @@ function App() {
     <Route path='/image' element={<ImageStack/>}/>
     <Route path='/inset' element={<ImageInset/>}/>
     <Route path='/settingdata' element={<SettingsData/>}/>
+    <Route path='/datatable' element={<DataTable/>}/>
+    <Route path='/avatar' element={<Avatar/>}/>
    </Routes>
     </>
   )

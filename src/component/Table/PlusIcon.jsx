@@ -21,4 +21,5 @@ export const PlusIcon = ({size = 24, width, height, ...props}) => (
       <path d="M12 18V6" />
     </g>
   </svg>
+  
 );
