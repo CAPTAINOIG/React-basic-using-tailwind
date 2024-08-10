@@ -33,7 +33,8 @@ const Post = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+    <div id='background' className='py-10 pb-10'>
+    <div className="relative z-50 max-w-lg mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
       <img 
         src="https://via.placeholder.com/400x200" 
         alt="Post" 
@@ -123,6 +124,7 @@ const Post = () => {
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 };
