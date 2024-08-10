@@ -16,6 +16,7 @@
     "@nextui-org/theme": "^2.2.9",
     "antd": "^5.19.1",
     "caniuse-lite": "^1.0.30001639",
+    "date-fns": "^3.6.0",
     "formik": "^2.4.6",
     "framer-motion": "^10.18.0",
     "lucide-react": "^0.321.0",

@@ -24,6 +24,8 @@ import ImageStack from './component/ImageStack'
 import ImageInset from './component/ImageInset'
 import SettingsData from './Settings/SettingsData'
 import DataTable from './component/newpage/DataTable'
+import Post from './component/Post'
+
 
 
 
@@ -57,6 +59,7 @@ function App() {
     <Route path='/settingdata' element={<SettingsData/>}/>
     <Route path='/datatable' element={<DataTable/>}/>
     <Route path='/avatar' element={<Avatar/>}/>
+    <Route path='/post' element={<Post/>}/>
    </Routes>
     </>
   )
