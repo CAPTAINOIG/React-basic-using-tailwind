@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaThumbsUp, FaRegThumbsUp, FaCommentDots, FaUserCircle } from 'react-icons/fa';
 import { format } from 'date-fns';
+import image1 from '../assets/image1.jpg'
 
 const Post = () => {
   const [likeCount, setLikeCount] = useState(0);
@@ -33,10 +34,10 @@ const Post = () => {
   };
 
   return (
-    <div id='background' className='py-10 pb-10'>
+    <div id='background' className='py-20'>
     <div className="relative z-50 max-w-lg mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
       <img 
-        src="https://via.placeholder.com/400x200" 
+        src={image1} 
         alt="Post" 
         className="w-full h-48 object-cover"
       />
