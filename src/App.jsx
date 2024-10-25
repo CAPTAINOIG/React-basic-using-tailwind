@@ -30,6 +30,7 @@ import PostsList from './Tanstack/PostList';
 import AddPostForm from './Tanstack/AddPostForm';
 import Home from './Tanstack/Home';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import ChatraWidget from './component/ChatraWidget';
 
 // Create a client
 const queryClient = new QueryClient();
@@ -72,6 +73,7 @@ function App() {
         <Route path='/posts' element={<PostsList />} />
         <Route path='/add-post' element={<AddPostForm />} />
         <Route path='/otp' element={<OtpInput onSubmit={handleOtpSubmit} />} />
+        <Route path='/chatra' element={<ChatraWidget />} />
       </Routes>
     </QueryClientProvider>
   );
